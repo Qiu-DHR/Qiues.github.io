@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>QiuMc</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body background="Backgound.png"
-style="background-repeat:no-repeat;
-background-size:100% 100%;
-background-attachment:fixed;">
-	<h5 align="center">
-	    <span><font size="20">QiuMc</font></span>
-	    <p><font size="5" color="yellow">/* QiuMc & Qiues' Minecraft Bedrock Editor sevser */</font></p>
-	    <hr />
-	    <div></div>
-	    <span><font size="5"><u>IP:</u></font><font size="5" color="green">&emsp;b.qiumc.eu.org</font></span>
-	    <div></div>
-	    <span><font size="5"><u>PORT:</u></font><font size="5" color="green">&ensp;52914</font></span>
-	</h5>
+<body>
+
+    <video class="background-video" autoplay loop muted>
+        <source src="your-video.mp4" type="video/mp4">
+        您的浏览器不支持视频播放。
+    </video>
+
+    <div class="birthday-container">
+        <h1 class="birthday-title">🎉 Happy Birthday! 🎂</h1>
+        <p class="birthday-message">Wishing you a day filled with love, laughter, and unforgettable memories!</p>
+        <button class="celebrate-btn" onclick="celebrate()">🎁 Celebrate 🎉</button>
+    </div>
+
+    <!-- 弹出祝福消息的容器 -->
+    <div id="popup-message" class="popup hidden">
+        <h2 class="popup-title">🎊 Surprise! 🎊</h2>
+        <p class="popup-content">Have an amazing birthday filled with joy and happiness! 🎂🎁🎉</p>
+        <button class="popup-close" onclick="closePopup(),clearCakeRain()">Close</button>
+    </div>
+
+    <!-- Background Cake Rain (hidden by default) -->
+    <div id="cake-rain"></div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-<!--
-Make by Qiutor
-version:1.0
-Data:2022.11.30
-for players:
-    CharlieCai0604
-    poiuasdf163
-    Ou136236
-    SuYang2380
-    Qiutor
---!>
