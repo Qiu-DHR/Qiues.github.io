@@ -1,25 +1,61 @@
-let cakeCount = 0;  // 跟踪已生成的蛋糕数量
-const maxCakeCount = 50;  // 最大蛋糕数量
+/*
+////////////////////////////////////////////////////////////////////
+//                          _ooOoo_                               //
+//                         o8888888o                              //
+//                         88" . "88                              //
+//                         (| ^_^ |)                              //
+//                         O\  =  /O                              //
+//                      ____/`---'\____                           //
+//                    .'  \\|     |//  `.                         //
+//                   /  \\|||  :  |||//  \                        //
+//                  /  _||||| -:- |||||-  \                       //
+//                  |   | \\\  -  /// |   |                       //
+//                  | \_|  ''\---/''  |   |                       //
+//                  \  .-\__  `-`  ___/-. /                       //
+//                ___`. .'  /--.--\  `. . ___                     //
+//              ."" '<  `.___\_<|>_/___.'  >'"".                  //
+//            | | :  `- \`.;`\ _ /`;.`/ - ` : | |                 //
+//            \  \ `-.   \_ __\ /__ _/   .-` /  /                 //
+//      ========`-.____`-.___\_____/___.-`____.-'========         //
+//                           `=---='                              //
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        //
+//             佛祖保佑       永无故障     永不修改                   //
+////////////////////////////////////////////////////////////////////
+
+DEVELOPED BY poiuasdf163 https://qiues.eu.org/
+email: poiuasdf887163@outlook.com
+
+THANKS TO:
+ **
+ * jQuery Ripples plugin v0.6.3 / https://github.com/sirxemic/jquery.ripples
+ * MIT License
+ * @author sirxemic / https://sirxemic.com/
+ **
+    
+*/
+
+let cakeCount = 0; // 跟踪已生成的蛋糕数量
+const maxCakeCount = 80; // 最大蛋糕数量
 
 function celebrate() {
     // 显示弹出窗口并添加动画
     const popup = document.getElementById("popup-message");
 
     // 重置弹窗位置，确保每次打开时都不偏移
-    popup.style.top = '50%';  // 弹窗垂直居中
-    popup.style.left = '50%';  // 弹窗水平居中
-    popup.style.transform = 'translate(-50%, -50%)';  // 确保弹窗完全居中
+    popup.style.top = '50%'; // 弹窗垂直居中
+    popup.style.left = '50%'; // 弹窗水平居中
+    popup.style.transform = 'translate(-50%, -50%)'; // 确保弹窗完全居中
 
 
     popup.classList.remove("hidden");
     popup.classList.remove("hide");
     popup.classList.add("show");
-    
-    
+
+
 
     // 激活蛋糕雨背景
     const cakeRain = document.getElementById("cake-rain");
-    cakeRain.style.display = "block";  // 显示蛋糕雨
+    cakeRain.style.display = "block"; // 显示蛋糕雨
 
     // 限制蛋糕生成数量
     const cakeInterval = setInterval(() => {
@@ -27,9 +63,9 @@ function celebrate() {
             createCake();
             cakeCount++;
         } else {
-            clearInterval(cakeInterval);  // 达到最大数量后停止生成
+            clearInterval(cakeInterval); // 达到最大数量后停止生成
         }
-    }, 500);  // 每500毫秒生成一个新的蛋糕
+    }, 100); // 每500毫秒生成一个新的蛋糕
 }
 
 function closePopup() {
@@ -59,8 +95,8 @@ function createCake() {
     cake.style.left = left + '%';
 
     // 随机旋转角度
-    const rotate = Math.random() * 360;  // 生成一个 0 到 360 之间的随机数
-    cake.style.transform = `rotate(${rotate}deg)`;  // 应用旋转
+    const rotate = Math.random() * 360; // 生成一个 0 到 360 之间的随机数
+    cake.style.transform = `rotate(${rotate}deg)`; // 应用旋转
 
     // 添加到蛋糕雨容器中
     const cakeRain = document.getElementById('cake-rain');
@@ -76,13 +112,13 @@ function createCake() {
 // 清除蛋糕雨容器中的所有蛋糕
 function clearCakeRain() {
     const cakeRain = document.getElementById('cake-rain');
-    cakeRain.innerHTML = '';  // 清空容器中的所有元素
+    cakeRain.innerHTML = ''; // 清空容器中的所有元素
 }
 
 var script = document.createElement("script");
-script.setAttribute("type","text/javascript");
-script.setAttribute("id","myhk");
-script.setAttribute("src","https://myhkw.cn/api/player/1732946239132");
-script.setAttribute("key","1732946239132");
-script.setAttribute("m","1");
+script.setAttribute("type", "text/javascript");
+script.setAttribute("id", "myhk");
+script.setAttribute("src", "https://myhkw.cn/api/player/1732946239132");
+script.setAttribute("key", "1732946239132");
+script.setAttribute("m", "1");
 document.documentElement.appendChild(script);

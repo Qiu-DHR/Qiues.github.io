@@ -1,18 +1,71 @@
+<!--
+////////////////////////////////////////////////////////////////////
+//                          _ooOoo_                               //
+//                         o8888888o                              //
+//                         88" . "88                              //
+//                         (| ^_^ |)                              //
+//                         O\  =  /O                              //
+//                      ____/`---'\____                           //
+//                    .'  \\|     |//  `.                         //
+//                   /  \\|||  :  |||//  \                        //
+//                  /  _||||| -:- |||||-  \                       //
+//                  |   | \\\  -  /// |   |                       //
+//                  | \_|  ''\---/''  |   |                       //
+//                  \  .-\__  `-`  ___/-. /                       //
+//                ___`. .'  /--.--\  `. . ___                     //
+//              ."" '<  `.___\_<|>_/___.'  >'"".                  //
+//            | | :  `- \`.;`\ _ /`;.`/ - ` : | |                 //
+//            \  \ `-.   \_ __\ /__ _/   .-` /  /                 //
+//      ========`-.____`-.___\_____/___.-`____.-'========         //
+//                           `=---='                              //
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        //
+//             佛祖保佑       永无故障     永不修改                   //
+////////////////////////////////////////////////////////////////////
+
+DEVELOPED BY poiuasdf163 https://qiues.eu.org/
+email: poiuasdf887163@outlook.com
+
+THANKS TO:
+/**
+ * jQuery Ripples plugin v0.6.3 / https://github.com/sirxemic/jquery.ripples
+ * MIT License
+ * @author sirxemic / https://sirxemic.com/
+ */
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="jquery.ripples.js"></script>
+
 </head>
+
 <body>
+    <!-- 水波背景容器 -->
+    <!--successfully loaded-->
 
-    <video class="background-video" autoplay loop muted>
-        <source src="your-video.mp4" type="video/mp4">
-        您的浏览器不支持视频播放。
-    </video>
+    <div style="position: absolute; inset: 0px;" , id="ripples-container" class="background-image"></div>
+    <script>
+        $('#ripples-container').ripples({
+            imageUrl: 'exam.png',
+            resolution: 1024, // 波纹的分辨率
+            dropRadius: 30, // 水滴的大小
+            perturbance: 0.04 // 扰动强度
+        });
+    </script>
 
+    <!-- 蛋糕雨效果 -->
+    <div id="cake-rain"></div>
+
+    <!-- 生日内容容器 -->
     <div class="birthday-container">
         <h1 class="birthday-title">🎉 Happy Birthday! 🎂</h1>
         <p class="birthday-message">Wishing you a day filled with love, laughter, and unforgettable memories!</p>
@@ -26,10 +79,6 @@
         <button class="popup-close" onclick="closePopup(),clearCakeRain()">Close</button>
     </div>
 
-    <!-- Background Cake Rain (hidden by default) -->
-    <div id="cake-rain"></div>
-
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="script.js"></script>
 </body>
+
 </html>

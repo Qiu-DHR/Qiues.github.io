@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景带图片的波纹效果</title>
+    
+    <!-- 引入jQuery -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 引入jQuery Ripples插件 -->
+    <script src="jquery.ripples.js"></script>
+    
+    <style>
+        /* 容器样式 */
+        #ripples-container {
+            width: 100%;
+            height: 100vh; /* 设置容器高度 */
+            background-image: url('exam.png'); /* 替换为你的图片路径 */
+            background-size: cover; /* 确保图片覆盖整个容器 */
+            background-position: center; /* 图片居中显示 */
+            position: relative; /* 防止其他内容影响布局 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 波纹效果的容器 -->
+    <div id="ripples-container"></div>
+
+    <!-- 初始化插件 -->
+    <script>
+        $(document).ready(function () {
+            $('#ripples-container').ripples({
+                resolution: 512,    // 波纹的分辨率
+                dropRadius: 20,     // 水滴的大小
+                perturbance: 0.04   // 扰动强度
+            });
+        });
+    </script>
+</body>
+</html>
